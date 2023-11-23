@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/bg2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Menu mobile *
+/* Cachez la liste de navigation par défaut sur les petits écrans */
+nav ul,
+nav.show ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    z-index: 1;
+}
+/* Style des éléments de la liste du menu déroulant */
+nav ul li {
+    padding: 15px;
+    width: 100%;
+    margin: 0;
+}
+
+/* Ajoutez une transition douce pour une animation agréable */
+nav ul li, nav ul li a {
+    transition: background-color 0.3s;
+}
+
+/* Changez la couleur de fond lorsqu'on survole les éléments du menu */
+nav ul li:hover {
+    background-color: #555;
+}
+
+/* Style de l'icône du menu */
+.menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Assurez-vous que le logo et le menu sont bien alignés */
+.logo-menu-container {
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.logo-menu-container ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px; /* La hauteur du menu */
+    left: 0;
+    background-color: #000; /* Couleur de fond du menu déroulant */
+    z-index: 1; /* Assurez-vous que le menu est au-dessus du reste du contenu */
+}
+
+/* Affichez le menu uniquement lorsqu'il est activé */
+.logo-menu-container.show ul {
+    display: flex;
+}
+/* Style du bouton de retour en haut */
+.logo{
+    height: 20px;
+    margin-top: 10px;
+}
+
+
+
+section {
+    margin: 20px 0;
+}
+
+#accueil,
+#intro-oppose {
+    max-width: 90%;
+    margin: 0 5% auto;
+    display: flex; /* Ajoutez ceci pour activer le modèle de boîte flex */
+    flex-direction: column; /* Assurez-vous que les éléments sont empilés verticalement */
+    align-items: center; /* Centrez les éléments horizontalement */
+}
+
+
+/* Centrer #services */
+#services {
+    max-width: 100%;
+    margin: auto 5%;
+    text-align: center;}
+
+#accueil h1,
+#intro-oppose h1,
+#services h1 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#accueil article,
+#intro-oppose article,
+.services-list li {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.image-description-container {
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.acceuil-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+.acceuil-description {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.acceuil-description h2 {
+    font-size: 2em;
+    margin-left:0px;
+    margin-right:0px;
+}
+
+#a_propos {
+    font-size: 0.9em;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.graphic-designer-image {
+    max-width: 100%;
+    height: auto;
+    margin: 50px auto;
+}
+
+.span1 {
+    color: orange;
+    font-weight: bold;
+}
+
+footer {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="style-mobile.css">
+    <style>
+        /* Votre code CSS existant ici */
+
+        footer {
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: -100px; /* Le footer est initialement décalé vers le bas de la fenêtre */
+            width: 100%;
+            transition: bottom 0.3s ease-in-out; /* Ajoutez une transition pour une animation fluide */
+        }
+    </style>
+    <title>Jeema Design - A propos</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo-menu-container">
+            <a href="index.html">
+                <img src="img/jeema.png" alt="Jeema Design Logo" class="logo">
+            </a>
+            <div class="menu-icon">&#9776;</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a_propos.html">À Propos</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="a_propos">
+    <h1>À Propos de Jeema Design</h1>
+    <article>
+        <p>
+            Bienvenue chez Jeema Design, votre partenaire créatif dans le monde numérique. Fondée le 20 janvier 2023, notre agence est spécialisée dans la création digitale, englobant un large éventail de services tels que la conception d'affiches percutantes, de logos mémorables, d'illustrations uniques, ainsi que dans l'impression, la communication, et le marketing web.
+        </p>
+        <p>
+            Notre équipe, composée de jeunes informaticiens dynamiques, est animée par une vision claire et des objectifs bien précis. Nous nous engageons à offrir des solutions créatives et innovantes qui répondent aux besoins uniques de chaque client. Chez Jeema Design, nous considérons chaque projet comme une opportunité de repousser les limites de la créativité et de transformer des idées en réalité visuelle.
+        </p>
+        <p>
+            Notre engagement envers l'excellence se reflète dans notre approche axée sur la satisfaction client. Nous sommes déterminés à dépasser les attentes, même des clients les plus exigeants, en offrant des créations qui captivent, inspirent, et renforcent la présence visuelle de chaque entreprise.
+        </p>
+        <p>
+            Explorez notre portfolio diversifié, découvrez notre expertise, et laissez-nous être votre partenaire de confiance pour tous vos besoins en design, impression, communication, et marketing web. Chez Jeema Design, chaque projet est plus qu'une simple réalisation ; c'est une histoire que nous construisons avec passion et dévouement.
+        </p>
+        <p>
+            Prêt à donner vie à vos idées? Contactez-nous dès aujourd'hui et laissez Jeema Design être le catalyseur de votre succès visuel.
+        </p>
+    </article>
+</section>
+<script>
+    // Ajoutez ce script JavaScript pour gérer l'affichage du footer
+    window.addEventListener('scroll', function () {
+        var footer = document.querySelector('footer');
+        var scrollPosition = window.innerHeight + window.scrollY;
+        var documentHeight = document.body.offsetHeight;
+
+        // Si l'utilisateur est tout en bas de la page, affichez le footer
+        if (scrollPosition >= documentHeight) {
+            footer.style.bottom = '0';
+        } else {
+            // Sinon, décalez le footer vers le bas de la fenêtre
+            footer.style.bottom = '-500px';
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var logoMenuContainer = document.querySelector('.logo-menu-container');
+        var menuIcon = document.querySelector('.menu-icon');
+
+    menuIcon.addEventListener('click', function () {
+        logoMenuContainer.classList.toggle('show');
+    });
+});
+</script>
+
+</body>
+</html>
