@@ -140,6 +140,12 @@ section {
     max-width: 90%;
     margin: 0 auto;
 }
+.apropos-image{
+    max-width: 95%; /* Pour s'assurer que l'image ne dépasse pas de la largeur du conteneur */
+    height: auto; /* Pour maintenir le ratio d'aspect original de l'image */
+    display: block; /* Pour éliminer tout espace supplémentaire sous l'image */
+    margin: 50px auto; /* Ajoutez une marge au-dessus de l'image pour l'espacement */
+}
 
 .graphic-designer-image {
     max-width: 100%;
@@ -150,6 +156,12 @@ section {
 .span1 {
     color: orange;
     font-weight: bold;
+}
+
+.portfolio_image{
+    max-width: 95%;
+    height: 100%;
+    margin-rigth: 5px;
 }
 
 footer {

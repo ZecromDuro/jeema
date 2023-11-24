@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="style-mobile.css">
+    <style>
+        /* Votre code CSS existant ici */
+
+        footer {
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: -100px; /* Le footer est initialement décalé vers le bas de la fenêtre */
+            width: 100%;
+            transition: bottom 0.3s ease-in-out; /* Ajoutez une transition pour une animation fluide */
+        }
+    </style>
+    <title>Jeema Design - A propos</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo-menu-container">
+            <a href="index.html">
+                <img src="img/jeema.png" alt="Jeema Design Logo" class="logo">
+            </a>
+            <div class="menu-icon">&#9776;</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a_propos.html">À Propos</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <img src="img/portfolio.png" alt="a propos" class="portfolio_image">
+   
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Jeema - Tous droits réservés</p>
+        </div>
+    </footer>
+<script>
+    // Ajoutez ce script JavaScript pour gérer l'affichage du footer
+    window.addEventListener('scroll', function () {
+        var footer = document.querySelector('footer');
+        var scrollPosition = window.innerHeight + window.scrollY;
+        var documentHeight = document.body.offsetHeight;
+
+        // Si l'utilisateur est tout en bas de la page, affichez le footer
+        if (scrollPosition >= documentHeight) {
+            footer.style.bottom = '0';
+        } else {
+            // Sinon, décalez le footer vers le bas de la fenêtre
+            footer.style.bottom = '-500px';
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var logoMenuContainer = document.querySelector('.logo-menu-container');
+        var menuIcon = document.querySelector('.menu-icon');
+
+    menuIcon.addEventListener('click', function () {
+        logoMenuContainer.classList.toggle('show');
+    });
+});
+</script>
+ 
+</body>
+</html>

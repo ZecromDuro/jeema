@@ -195,7 +195,7 @@ hr {
 #a_propos {
     text-align: center;
     font-size: 1em;
-    max-width: 600px;
+    max-width: 65%;
     margin: 0 auto;
 }
 
@@ -207,6 +207,20 @@ hr {
     margin: 100px auto; /* Ajoutez une marge au-dessus de l'image pour l'espacement */
 }
 
+.apropos-image{
+    max-width: 90%; /* Pour s'assurer que l'image ne dépasse pas de la largeur du conteneur */
+    height: auto; /* Pour maintenir le ratio d'aspect original de l'image */
+    display: block; /* Pour éliminer tout espace supplémentaire sous l'image */
+    margin: 50px auto; /* Ajoutez une marge au-dessus de l'image pour l'espacement */
+
+}
+.portfolio_image{
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin:auto;
+
+}
 .span1{
     color: orange;
     font-weight: bold;
@@ -264,4 +278,7 @@ footer {
         text-align: center;
 
     
+    }
+    .menu-icon{
+        opacity: 0%;
     }
