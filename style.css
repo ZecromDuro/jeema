@@ -68,6 +68,7 @@ nav ul li:hover > ul {
     opacity: 1;
     margin-top: 1px;
     transition-delay: 0s;
+    text-decoration: line-through;
 }
 
 nav ul li:not(:hover) > ul {
@@ -282,3 +283,4 @@ footer {
     .menu-icon{
         opacity: 0%;
     }
+

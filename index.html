@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen and (max-width: 480px)" href="style-mobile.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <style>
         /* Votre code CSS existant ici */
 
@@ -22,19 +23,25 @@
     <title>Jeema Design</title>
 </head>
 <body>
+    <div class="overlay"></div>
 
     <header>
         <div class="logo-menu-container">
+             <div class="close-icon">✖</div>
             <a href="index.html">
                 <img src="img/jeema.png" alt="Jeema Design Logo" class="logo">
             </a>
             <div class="menu-icon">&#9776;</div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="a_propos.html">À Propos</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="move-up"><a href="index.html">ACCEUIL</a></li>
+                    <li class="move-up"><a href="a_propos.html">À PROPOS</a></li>
+                    <li class="move-up"><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li class="move-up"><a href="contact.html">CONTACT</a></li>
+                    <div class="nav-icons-container">
+                    <li><a href="mailto:yjeanaristide@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="https://www.facebook.com/JeemaDesign" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -128,7 +135,7 @@
 </section>
 
 
-    <!-- ... Autres contenus de la section ... -->
+    <!-- ... Autres contenus de la section ... --> 
 </section>
 <!-- À Propos de Jeema Design -->
 
@@ -140,6 +147,7 @@
     </footer>
 
 </div>
+
 <script>
     // Ajoutez ce script JavaScript pour gérer l'affichage du footer
     window.addEventListener('scroll', function () {
@@ -156,14 +164,24 @@
         }
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        var logoMenuContainer = document.querySelector('.logo-menu-container');
-        var menuIcon = document.querySelector('.menu-icon');
+document.addEventListener('DOMContentLoaded', function () {
+    var logoMenuContainer = document.querySelector('.logo-menu-container');
+    var menuIcon = document.querySelector('.menu-icon');
+    var closeIcon = document.querySelector('.close-icon');
 
     menuIcon.addEventListener('click', function () {
         logoMenuContainer.classList.toggle('show');
+        // Affiche ou masque la croix en fonction de l'état du menu
+        closeIcon.style.display = logoMenuContainer.classList.contains('show') ? 'block' : 'none';
+    });
+
+    // Ajoutez un gestionnaire de clic pour la croix
+    closeIcon.addEventListener('click', function () {
+        logoMenuContainer.classList.remove('show');
+        closeIcon.style.display = 'none'; // Masque la croix
     });
 });
+
 </script>
 
 </body>
